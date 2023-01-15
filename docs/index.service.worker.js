@@ -3,14 +3,14 @@
 // that they need an Internet connection to run the project if desired.
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
-const CACHE_VERSION = "1673822606|3940565061";
+const CACHE_VERSION = "1673824907|6241454878";
 const CACHE_PREFIX = "Duckie Must Win-sw-cache-";
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
-const OFFLINE_URL = "Duckie Must Win.offline.html";
+const OFFLINE_URL = "index.offline.html";
 // Files that will be cached on load.
-const CACHED_FILES = ["Duckie Must Win.html","Duckie Must Win.js","Duckie Must Win.offline.html","Duckie Must Win.icon.png","Duckie Must Win.apple-touch-icon.png"];
+const CACHED_FILES = ["index.html","index.js","index.offline.html","index.icon.png","index.apple-touch-icon.png"];
 // Files that we might not want the user to preload, and will only be cached on first load.
-const CACHABLE_FILES = ["Duckie Must Win.wasm","Duckie Must Win.pck"];
+const CACHABLE_FILES = ["index.wasm","index.pck"];
 const FULL_CACHE = CACHED_FILES.concat(CACHABLE_FILES);
 
 self.addEventListener("install", (event) => {
