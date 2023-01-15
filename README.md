@@ -1,32 +1,14 @@
-# Tiny Platform Quest
+# [Duckie Must Win](https://www.duckboxing.live)
 
-## What?
-This game is a demo I made with the **Godot engine**, for learning purposes.
+![Duckie png](https://github.com/willieLjohnson/Duckie/blob/main/icon.png)
 
-[> Go to Godot engine](http://godotengine.org)
 
-## Credits
-I used the tilesets of **Dan Cramp**, as well as his video for the gameplay.
+![Duckie png](https://github.com/willieLjohnson/Duckie/blob/main/gfx/godot.png)
+
+Inspired by Tiny Platform Quest
 
 [> See his tilesets and spritesheets](https://opengameart.org/content/tiny-platform-quest-sprites)
 
-[> See his Youtube channel](https://www.youtube.com/watch?v=DehdHBd6HRM)
+Some of the sfx comes from [Open game art](https://opengameart.org).
 
-[> See his website](http://www.dancramp.com)
-
-The musics and sfx comes from [Open game art](https://opengameart.org).
-
-Thank you to the Godot community all around the world and especially
-to the French community for their help and passion.
-
-Please, visit **Solo CodeNet** channel on Youtube and his Discord.
-
-[> His Youtube channel](https://www.youtube.com/channel/UC2Kl-Y9g3CJST4U8kAyYxHw/videos)
-
-[> His Discord channel](https://discord.gg/gZ3QJ5T)
-
-
-
-This demo is distributed with the permission of his Author!
-
-Thank you Dan ^^
+Please, visit **Duck Boxing** stream at <https://www.duckboxing.live>
