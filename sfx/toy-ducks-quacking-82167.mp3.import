@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/toy-ducks-quacking-82167.mp3-1e80563fa53eed6615833aaa6bb29a71.mp3str"
+
+[deps]
+
+source_file="res://sfx/toy-ducks-quacking-82167.mp3"
+dest_files=[ "res://.import/toy-ducks-quacking-82167.mp3-1e80563fa53eed6615833aaa6bb29a71.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

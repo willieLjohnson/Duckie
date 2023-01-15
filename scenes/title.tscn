@@ -1,0 +1,206 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scripts/title.gd" type="Script" id=1]
+[ext_resource path="res://tilesets/tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://fonts/Pixeled.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://fonts/pixelart.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://tilesets/tiles_signs.png" type="Texture" id=5]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 1
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 28
+outline_size = 1
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+outline_size = 1
+extra_spacing_char = 1
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+outline_size = 1
+extra_spacing_char = -1
+font_data = ExtResource( 4 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 41.5, 57.75 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 15
+extra_spacing_bottom = -15
+font_data = ExtResource( 3 )
+
+[node name="main" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="env_background" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131072, 6, 1, 131073, 6, 1, 131074, 6, 1, 131075, 6, 1, 131076, 6, 1, 131077, 6, 1, 131078, 6, 1, 131079, 6, 1, 131080, 6, 1, 131081, 6, 1, 131082, 6, 1, 131083, 6, 1, 131084, 6, 1, 131085, 6, 1, 131086, 6, 1, 131087, 6, 1, 131088, 6, 1, 131089, 6, 1, 196608, 6, 1, 196609, 6, 1, 196610, 6, 1, 196611, 6, 1, 196612, 6, 1, 196613, 6, 1, 196614, 6, 1, 196615, 6, 1, 196616, 6, 1, 196617, 6, 1, 196618, 6, 1, 196619, 6, 1, 196620, 6, 1, 196621, 6, 1, 196622, 6, 1, 196623, 6, 1, 196624, 6, 1, 196625, 6, 1, 262144, 6, 1, 262145, 6, 1, 262146, 6, 1, 262147, 6, 1, 262148, 6, 1, 262149, 6, 1, 262150, 6, 1, 262151, 6, 1, 262152, 6, 1, 262153, 6, 1, 262154, 6, 1, 262155, 6, 1, 262156, 6, 1, 262157, 6, 1, 262158, 6, 1, 262159, 6, 1, 262160, 6, 1, 262161, 6, 1, 327680, 6, 1, 327681, 6, 1, 327682, 6, 1, 327683, 6, 1, 327684, 6, 1, 327685, 6, 1, 327686, 6, 1, 327687, 6, 1, 327688, 6, 1, 327689, 6, 1, 327690, 6, 1, 327691, 6, 1, 327692, 6, 1, 327693, 6, 1, 327694, 6, 1, 327695, 6, 1, 327696, 6, 1, 327697, 6, 1, 393216, 6, 1, 393217, 6, 1, 393218, 6, 1, 393219, 6, 1, 393220, 6, 1, 393221, 6, 1, 393222, 6, 1, 393223, 6, 1, 393224, 6, 1, 393225, 6, 1, 393226, 6, 1, 393227, 6, 1, 393228, 6, 1, 393229, 6, 1, 393230, 6, 1, 393231, 6, 1, 393232, 6, 1, 393233, 6, 1, 458758, 2, 327680 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="env" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65535, 2, 196611, 0, 2, 196611, 1, 2, 196611, 2, 2, 196611, 3, 2, 196611, 4, 2, 196611, 5, 2, 196611, 6, 2, 196611, 7, 2, 196611, 8, 2, 196611, 9, 2, 196611, 10, 2, 196611, 11, 2, 196611, 12, 2, 196611, 13, 2, 196611, 14, 2, 196611, 15, 2, 196611, 16, 2, 196611, 17, 2, 196611, 18, 2, 196611, 131071, 2, 196611, 65536, 2, 196611, 65537, 2, 196611, 65538, 2, 196611, 65539, 2, 196611, 65540, 2, 196611, 65541, 2, 196611, 65542, 2, 196611, 65543, 2, 196611, 65544, 2, 196611, 65545, 2, 196611, 65546, 2, 196611, 65547, 2, 196611, 65548, 2, 196611, 65549, 2, 196611, 65550, 2, 196611, 65551, 2, 196611, 65552, 2, 196611, 65553, 2, 196611, 65554, 2, 196611, 196607, 2, 196611, 262143, 2, 196611, 196626, 2, 196611, 327679, 2, 196611, 262148, 1073741831, 3, 262157, 1073741831, 3, 262162, 2, 196611, 393215, 2, 196611, 327684, 7, 3, 327685, 1073741831, 3, 327692, 1073741831, 3, 327693, 1073741831, 3, 327698, 2, 196611, 458751, 2, 196611, 393216, 7, 5, 393217, 7, 5, 393220, 7, 65540, 393229, 7, 65540, 393230, 7, 5, 393232, 5, 3, 393234, 2, 196611, 524287, 2, 196611, 458752, 10, 0, 458753, 10, 1, 458754, 10, 2, 458756, 10, 0, 458757, 2, 0, 458758, 2, 2, 458759, 2, 65537, 458760, 2, 2, 458761, 2, 2, 458762, 2, 65538, 458763, 2, 2, 458764, 2, 0, 458765, 2, 0, 458766, 2, 0, 458767, 2, 0, 458768, 2, 0, 458769, 2, 0, 458770, -1073741822, 196612, 589823, 2, 196611, 524288, 10, 65536, 524289, 10, 65537, 524290, 10, 65538, 524292, -1073741822, 0, 524293, -1073741822, 196612, 524294, -1073741822, 196612, 524295, -1073741822, 196612, 524296, -1073741822, 196612, 524297, -1073741822, 196612, 524298, -1073741822, 196612, 524299, -1073741822, 196612, 524300, -1073741822, 196612, 524301, -1073741822, 196612, 524302, -1073741822, 196612, 524303, -1073741822, 196612, 524304, -1073741822, 196612, 524305, -1073741822, 196612, 524306, -1073741822, 196612, 655359, 2, 196611, 589824, 10, 65536, 589825, 10, 65537, 589826, 10, 65538, 589828, -1073741822, 0, 589829, -1073741822, 196609, 589830, -1073741822, 196609, 589831, -1073741822, 196609, 589832, -1073741822, 196609, 589833, -1073741822, 196609, 589834, -1073741822, 196609, 589835, -1073741822, 196612, 589836, -1073741822, 196612, 589837, -1073741822, 196612, 589838, -1073741822, 196612, 589839, -1073741822, 196612, 589840, -1073741822, 196612, 589841, -1073741822, 196612, 589842, -1073741822, 196612, 589843, -1073741822, 196612, 589844, -1073741822, 196612, 655360, 10, 65536, 655361, 10, 65537, 655362, 10, 65538, 655364, -1073741822, 0, 655365, -1073741822, 196612, 655366, -1073741822, 196612, 655367, -1073741822, 196612, 655368, -1073741822, 196612, 655369, -1073741822, 196612, 720896, 10, 131072, 720897, 10, 131073, 720898, 10, 131074, 720900, -1073741822, 0 )
+
+[node name="dukie" type="Label" parent="."]
+modulate = Color( 1, 0.917647, 0, 1 )
+light_mask = 0
+margin_left = 184.0
+margin_top = 34.0
+margin_right = 400.0
+margin_bottom = 146.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 1 )
+text = "DUCKIE"
+align = 1
+
+[node name="winnn" type="Label" parent="."]
+light_mask = 0
+margin_left = 250.0
+margin_top = 102.0
+margin_right = 410.0
+margin_bottom = 182.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+text = "WIN"
+align = 1
+
+[node name="must" type="Label" parent="."]
+light_mask = 0
+margin_left = 171.0
+margin_top = 127.0
+margin_right = 331.0
+margin_bottom = 172.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 3 )
+text = "MUST
+"
+align = 1
+
+[node name="must2" type="Label" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+light_mask = 0
+margin_left = 203.0
+margin_top = 135.0
+margin_right = 293.0
+margin_bottom = 204.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 6 )
+text = "____
+
+"
+align = 1
+
+[node name="continue_zone" type="Area2D" parent="."]
+position = Vector2( -192, 128 )
+collision_layer = 0
+collision_mask = 2
+gravity = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="collision" type="CollisionShape2D" parent="continue_zone"]
+position = Vector2( 16, 32 )
+shape = SubResource( 4 )
+
+[node name="label" type="Label" parent="continue_zone"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -21.0
+margin_top = -3.0
+margin_right = 139.0
+margin_bottom = 77.0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "
+LEVEL 1"
+align = 1
+
+[node name="sign" type="Sprite" parent="continue_zone"]
+position = Vector2( 34, 79 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 32, 32 )
+
+[node name="infinite_zone" type="Area2D" parent="."]
+position = Vector2( 74, 280 )
+collision_layer = 0
+collision_mask = 2
+gravity = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="collision" type="CollisionShape2D" parent="infinite_zone"]
+position = Vector2( 32, 63 )
+scale = Vector2( 1, 0.561266 )
+shape = SubResource( 4 )
+
+[node name="label" type="Label" parent="infinite_zone"]
+modulate = Color( 0.992157, 1, 0, 1 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 100.0
+margin_top = -1.0
+margin_right = 262.0
+margin_bottom = 79.0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "Infinite Mode
+"
+align = 1
+
+[node name="sign" type="Sprite" parent="infinite_zone"]
+position = Vector2( 43, 21 )
+rotation = -1.57079
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 32, 32 )
+
+[node name="new_zone" type="Area2D" parent="."]
+position = Vector2( 112, 128 )
+collision_layer = 0
+collision_mask = 2
+gravity = 0.0
+
+[node name="collision" type="CollisionShape2D" parent="new_zone"]
+position = Vector2( 448, 54.25 )
+shape = SubResource( 4 )
+
+[node name="label" type="Label" parent="new_zone"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_right = 0.17
+margin_left = 333.0
+margin_top = 28.0
+margin_right = 477.0
+margin_bottom = 107.0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "NEW GAME"
+align = 1
+
+[node name="player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 288, 80 )
