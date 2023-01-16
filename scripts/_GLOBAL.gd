@@ -15,6 +15,8 @@ var savePath:String = "user://savedata.bin"
 var passPhrase:String = "OkdfPooie0029?/dll"
 var current_music:String = ""
 
+var time:float = 0
+
 var infinite_mode:bool = false
 # for debug only
 #func _ready():
@@ -58,10 +60,9 @@ func restart_scene() -> void:
 	yield(scene_fade, "tween_completed")
 	$color.hide()
 	get_tree().paused = false
-
+	
 func next_scene(scene:String = "", fade_out:float = 1, fade_in:float = .5) -> void:
 	scene_name = scene
-
 	scene_fade = scene_fade_out(fade_out)
 	yield(scene_fade, "tween_completed")
 	
@@ -87,6 +88,8 @@ func next_scene(scene:String = "", fade_out:float = 1, fade_in:float = .5) -> vo
 	yield(scene_fade, "tween_completed")
 	$color.hide()
 	get_tree().paused = false
+
+
 
 func scene_fade_out(time:float) -> Node:
 	get_tree().paused = true
@@ -122,6 +125,7 @@ func save_game() -> void:
 
 	var datas:Dictionary = {}
 	datas.level = level_index
+	datas.time = time
 
 	file.store_string(JSON.print(datas))
 	file.close()
@@ -129,14 +133,17 @@ func save_game() -> void:
 func load_game() -> void:
 	if !file.file_exists(savePath):
 		level_index = 1
-
+		time = 0
 	else:
 		file.open_encrypted_with_pass(savePath, File.READ, passPhrase)
 		var datas = parse_json(file.get_as_text())
 		file.close()
 
 		level_index = datas.level
-
+		time = datas.time
+		
+		
+		
 		GLOBAL.scene_name = "level"
 
 		GLOBAL.change_music("music_level")
