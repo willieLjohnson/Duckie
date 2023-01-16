@@ -120,6 +120,10 @@ ui_end={
 "events": [  ]
 }
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [layer_names]
 
 2d_physics/layer_1="env"
@@ -139,6 +143,5 @@ name_casing=1
 
 2d/snapping/use_gpu_pixel_snap=true
 vram_compression/import_etc=true
-vram_compression/import_etc2=false
 quality/dynamic_fonts/use_oversampling=false
 quality/2d/use_pixel_snap=true

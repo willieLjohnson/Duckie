@@ -22,6 +22,7 @@ func _process(delta:float) -> void:
 		var down:bool = Input.is_action_just_pressed("ui_down")
 		var left:bool = Input.is_action_just_pressed("ui_left")
 		var right:bool = Input.is_action_just_pressed("ui_right")
+		
 
 		if up || down || left || right:
 			GLOBAL.change_music("music_title")

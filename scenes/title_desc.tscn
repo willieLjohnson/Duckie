@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scripts/title_desc.gd" type="Script" id=1]
 [ext_resource path="res://tilesets/tiles.tres" type="TileSet" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://fonts/pixelart.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://scenes/princess.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/evil.tscn" type="PackedScene" id=7]
+[ext_resource path="res://gfx/lineLight23.png" type="Texture" id=8]
+[ext_resource path="res://scenes/skip.gd" type="Script" id=9]
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -307,5 +309,11 @@ position = Vector2( 510, 48 )
 [node name="timer" type="Timer" parent="."]
 wait_time = 16.0
 autostart = true
+
+[node name="skip" type="TouchScreenButton" parent="."]
+position = Vector2( 488, 232 )
+normal = ExtResource( 8 )
+action = "ui_right"
+script = ExtResource( 9 )
 
 [editable path="player2"]

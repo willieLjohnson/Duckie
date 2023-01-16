@@ -4,18 +4,19 @@ export var infiniteMode:bool = false
 var time:float = 0
 
 func _ready() -> void:
+	$buttons.visible = OS.has_feature("mobile")
+
 	get_tree().paused = false
 	time = 0
 	show_time()
 	show_level()
 
 	$timer.connect("timeout", self, "_on_timer_timeout")
-
 func _on_timer_timeout() -> void:
 	show_time()
 	if infiniteMode:
 		$level/label.text = str(GLOBAL.score)
-
+		
 func show_time() -> void:
 	time += 0.01
 	if infiniteMode:

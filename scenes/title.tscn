@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scripts/title.gd" type="Script" id=1]
 [ext_resource path="res://tilesets/tiles.tres" type="TileSet" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://fonts/pixelart.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://tilesets/tiles_signs.png" type="Texture" id=5]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://gfx/lineDark19.png" type="Texture" id=8]
+[ext_resource path="res://gfx/lineDark20.png" type="Texture" id=9]
+[ext_resource path="res://gfx/lineDark21.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -204,3 +207,25 @@ align = 1
 
 [node name="player" parent="." instance=ExtResource( 6 )]
 position = Vector2( 288, 80 )
+
+[node name="hud" type="Node2D" parent="."]
+
+[node name="buttons" type="Node2D" parent="hud"]
+
+[node name="left" type="TouchScreenButton" parent="hud/buttons"]
+position = Vector2( 8, 232 )
+normal = ExtResource( 8 )
+pressed = ExtResource( 8 )
+action = "ui_left"
+
+[node name="right" type="TouchScreenButton" parent="hud/buttons"]
+position = Vector2( 104, 232 )
+normal = ExtResource( 9 )
+pressed = ExtResource( 9 )
+action = "ui_right"
+
+[node name="jump" type="TouchScreenButton" parent="hud/buttons"]
+position = Vector2( 488, 232 )
+normal = ExtResource( 10 )
+pressed = ExtResource( 10 )
+action = "ui_up"

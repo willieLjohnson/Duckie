@@ -306,7 +306,6 @@ tracks/0/keys = {
 }
 
 [node name="scene" type="Node2D"]
-position = Vector2( 29, 3 )
 
 [node name="env_background" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -419,12 +418,10 @@ looks back!"
 anims/change_text = SubResource( 11 )
 
 [node name="hud" parent="." instance=ExtResource( 5 )]
-time = 1
-countBy = 1
 infiniteMode = true
 
-[node name="level" parent="hud" index="1"]
-position = Vector2( 497, 1 )
+[node name="level" parent="hud" index="3"]
+position = Vector2( 528, 8 )
 
 [node name="env_foreground" type="TileMap" parent="."]
 position = Vector2( -14, 0 )
