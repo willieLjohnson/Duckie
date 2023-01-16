@@ -4,8 +4,7 @@ export var infiniteMode:bool = false
 var time:float = 0
 
 func _ready() -> void:
-	$buttons.visible = OS.has_feature("mobile")
-
+	
 	get_tree().paused = false
 	time = 0
 	show_time()

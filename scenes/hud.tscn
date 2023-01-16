@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/hud.gd" type="Script" id=1]
 [ext_resource path="res://fonts/Pixeled.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://gfx/lineDark19.png" type="Texture" id=3]
-[ext_resource path="res://gfx/lineDark20.png" type="Texture" id=4]
+[ext_resource path="res://scenes/mobile-buttons.gd" type="Script" id=3]
 [ext_resource path="res://gfx/lineDark21.png" type="Texture" id=5]
 [ext_resource path="res://gfx/lineLight23.png" type="Texture" id=6]
 [ext_resource path="res://gfx/lineLight22.png" type="Texture" id=7]
@@ -31,26 +30,27 @@ wait_time = 0.01
 autostart = true
 
 [node name="buttons" type="Node2D" parent="."]
+script = ExtResource( 3 )
 
 [node name="left" type="TouchScreenButton" parent="buttons"]
 position = Vector2( 8, 232 )
 z_index = 4
-normal = ExtResource( 7 )
-pressed = ExtResource( 3 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 7 )
 action = "ui_left"
 
 [node name="right" type="TouchScreenButton" parent="buttons"]
 position = Vector2( 104, 232 )
 z_index = 4
-normal = ExtResource( 6 )
-pressed = ExtResource( 4 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 6 )
 action = "ui_right"
 
 [node name="jump" type="TouchScreenButton" parent="buttons"]
 position = Vector2( 488, 232 )
 z_index = 4
-normal = ExtResource( 8 )
-pressed = ExtResource( 5 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 8 )
 action = "ui_up"
 
 [node name="level" type="Node2D" parent="."]
