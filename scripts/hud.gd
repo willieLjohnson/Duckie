@@ -19,10 +19,10 @@ func _on_timer_timeout() -> void:
 func show_time() -> void:
 	time += 0.01
 	if infiniteMode:
-		$time.text = str(time)
+		$time/label.text = str(time)
 	else:
 		GLOBAL.time += 0.01
-		$time.text = str(GLOBAL.time)
+		$time/label.text = str(GLOBAL.time)
 	
 
 func show_level() -> void:
