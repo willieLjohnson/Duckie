@@ -7,9 +7,7 @@ func _ready() -> void:
 	GLOBAL.change_music("music_win", .1)
 
 	$player.freeze()
-	$time/label.text = str(GLOBAL.time) + " seconds"
-	if GLOBAL.time > 120:
-		$time/label.text = str(GLOBAL.time / 60) + " minutes"
+	$time.text = GLOBAL.seconds2hhmmss(GLOBAL.time, "%01d:%.01f")
 
 	yield(get_tree().create_timer(2.0), "timeout")
 	pause = false

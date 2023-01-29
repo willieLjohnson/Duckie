@@ -20,43 +20,43 @@ collision_mask = 2
 [node name="sprite4" type="Sprite" parent="platform"]
 position = Vector2( -32, -48 )
 texture = ExtResource( 2 )
-vframes = 5
 hframes = 11
+vframes = 5
 frame = 13
 
 [node name="sprite5" type="Sprite" parent="platform"]
 position = Vector2( 0, -48 )
 texture = ExtResource( 2 )
-vframes = 5
 hframes = 11
+vframes = 5
 frame = 15
 
 [node name="sprite6" type="Sprite" parent="platform"]
 position = Vector2( 32, -48 )
 texture = ExtResource( 2 )
-vframes = 5
 hframes = 11
+vframes = 5
 frame = 19
 
 [node name="sprite" type="Sprite" parent="platform"]
 position = Vector2( -32, -16 )
 texture = ExtResource( 3 )
-vframes = 3
 hframes = 11
+vframes = 3
 frame = 1
 
 [node name="sprite2" type="Sprite" parent="platform"]
 position = Vector2( 0, -16 )
 texture = ExtResource( 3 )
-vframes = 3
 hframes = 11
+vframes = 3
 frame = 1
 
 [node name="sprite3" type="Sprite" parent="platform"]
 position = Vector2( 32, -16 )
 texture = ExtResource( 3 )
-vframes = 3
 hframes = 11
+vframes = 3
 frame = 1
 
 [node name="collision" type="CollisionShape2D" parent="platform"]
@@ -74,4 +74,3 @@ position = Vector2( 0, -16 )
 shape = SubResource( 2 )
 
 [node name="tween" type="Tween" parent="."]
-

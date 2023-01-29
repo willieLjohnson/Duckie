@@ -16,17 +16,12 @@ var passPhrase:String = "OkdfPooie0029?/dll"
 var current_music:String = ""
 
 var time:float = 0
+onready var timer:Timer = $timer
 
 var infinite_mode:bool = false
-# for debug only
-#func _ready():
-#	print("[Screen Metrics]")
-#	print("Display size: ", OS.get_screen_size())
-#	print("Decorated Window size: ", OS.get_real_window_size())
-#	print("Window size: ", OS.get_window_size())
-#	print("Project Settings: Width=", ProjectSettings.get_setting("display/window/size/width"), " Height=", ProjectSettings.get_setting("display/window/size/height"))
-#	print(OS.get_window_size().x)
-#	print(OS.get_window_size().y)
+
+func _ready() -> void:
+	timer.connect("timeout", self, "_on_globaltimer_timeout")
 
 func _process(delta) -> void:
 	# MENU ESC
@@ -42,6 +37,7 @@ func _process(delta) -> void:
 			get_tree().paused = false
 			if has_node("/root/esc_scene"):
 				get_node("/root/esc_scene").queue_free()
+	
 
 func restart_scene() -> void:
 	yield(get_tree().create_timer(1), "timeout")
@@ -142,8 +138,6 @@ func load_game() -> void:
 		level_index = datas.level
 		time = datas.time
 		
-		
-		
 		GLOBAL.scene_name = "level"
 
 		GLOBAL.change_music("music_level")
@@ -166,4 +160,17 @@ func change_music(node_name:String, delay:float = 1) -> void:
 	$tween_music.start()
 	current_music = node_name
 
+func global_time() -> String:
+	return seconds2hhmmss(time)
 
+func seconds2hhmmss(total_seconds: float, format:String = "%01d:%.01f") -> String:
+
+	var seconds:float = fmod(total_seconds , 60.0)
+	var minutes:int   =  int(total_seconds / 60.0) % 60
+	var mmss_string:String = format % [minutes, seconds]
+
+	return mmss_string
+
+func _on_globaltimer_timeout() -> void:
+	time += 0.01
+	

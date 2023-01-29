@@ -62,3 +62,5 @@ stream = ExtResource( 11 )
 [node name="tween_music" type="Tween" parent="."]
 
 [node name="timer" type="Timer" parent="."]
+wait_time = 0.01
+autostart = true

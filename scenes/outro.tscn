@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/outro.gd" type="Script" id=1]
 [ext_resource path="res://tilesets/tiles.tres" type="TileSet" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/princess.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/evil.tscn" type="PackedScene" id=5]
 [ext_resource path="res://fonts/pixelart.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://fonts/retrobound.medium.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="Animation" id=6]
 length = 0.001
@@ -97,6 +98,10 @@ tracks/3/keys = {
 size = 20
 font_data = ExtResource( 6 )
 
+[sub_resource type="DynamicFont" id=7]
+size = 24
+font_data = ExtResource( 7 )
+
 [node name="root" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -162,9 +167,8 @@ margin_top = 115.0
 margin_right = 576.0
 margin_bottom = 280.0
 custom_colors/font_color = Color( 1, 0.960784, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "TIME: 10223.12312
-"
+custom_fonts/font = SubResource( 7 )
+text = "LFG! DUCKIE WINS!!"
 align = 1
 valign = 3
 
